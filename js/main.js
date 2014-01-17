@@ -94,16 +94,15 @@ function showAlert(title){
 function submitForm(language) {
 // result 会作为json 数据发给objC端
     var result = {};
-    var content = document.getElementById("content").value;
-    var age_group = document.getElementById("age_group").value;
-    var gender = document.getElementById("gender").value;
-    var rate = document.getElementById("rate").value;
-    if (!!age_group) {
-        result.age_group = age_group
-    }
-    if (!!gender) {
-        result.gender = gender
-    }
+    // var content = document.getElementById("content").value;
+    // var email = document.getElementById("email").value;
+    // // var age_group = document.getElementById("age_group").value;
+    // // var gender = document.getElementById("gender").value;
+    // // var rate = document.getElementById("rate").value;
+    // if (!!email) {
+    //     result.email = email
+    // }
+    
 
 
 //自定义字段，目前有提供了两个自定义Hash可用

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>意见反馈</title>
@@ -106,7 +106,7 @@
 </div>
 <script>
 // 取 iOS 系统版本
-     function iOSversion() {
+    function iOSversion() {
       if (/iP(hone|od|ad)/.test(navigator.platform)) {
         // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
         var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
@@ -118,16 +118,22 @@
     var version = iOSversion();
     $wrapper=$('.wrapper');
     $footer=$('.footer');
+    $('.textField').on('focus',function(){
+        $wrapper.removeClass('wrapper-lt-iphone5');
+        $footer.removeClass('footer-lt-iphone5');
+        $footer.css('bottom','0');
+        $('.header,.back_button,.info-body').addClass('header-lt-iphone5');
 
+    })
+    $('#email').on('focus',function(){
+        $('.header,.back_button,.info-body').removeClass('header-lt-iphone5');
+        $footer.css('bottom','20px');
+    })
     if (version[0] < 7) {
         $wrapper.addClass('wrapper-lt-iphone5');
         $footer.addClass('footer-lt-iphone5');
-        $('.textField').on('focus',function(){
-            $wrapper.removeClass('wrapper-lt-iphone5');
-            $footer.removeClass('footer-lt-iphone5');
-            $('.header').add('.back_button').addClass('header-lt-iphone5');
-        })
     }
+
 
    
 </script>
