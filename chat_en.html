@@ -54,18 +54,18 @@
 <body>
 <div id="header-wrapper"><div id="header" class="header">意见反馈</div><a class="button back_button" id="backBtn"></a></div>
 <div class="info-body">
-    <div id="age_gender" style="float: left;
+    <div id="email_qq" style="float: left;
         padding-top: 6px;
-        padding-left: 9px;">Gender/Age:
+        padding-left: 9px;">Email / QQ:
     </div>
-    <div class="select_group">
+    <div class="select_group" style="display:none">
         <select id="gender" style="width:100px">
             <option value>Select Gender</option>
             <option value="1">Male</option>
             <option value="2">Female</option>
         </select>
     </div>
-    <div class="select_group">
+    <div class="select_group" style="display:none">
         <select id="age_group" style="width:100px">
             <option value>Select Age</option>
             <option value="1"> < 18</option>
@@ -77,6 +77,9 @@
             <option value="7">51～59</option>
             <option value="8">> 60</option>
         </select>
+    </div>
+    <div class="select_group">
+        <input type="text" id="email">
     </div>
 </div>
 <div id="container">
@@ -125,7 +128,7 @@
 </div>
 <script>
 // 取 iOS 系统版本
-     function iOSversion() {
+    function iOSversion() {
       if (/iP(hone|od|ad)/.test(navigator.platform)) {
         // supports iOS 2.0 and later: <http://bit.ly/TJjs1V>
         var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
@@ -137,17 +140,21 @@
     var version = iOSversion();
     $wrapper=$('.wrapper');
     $footer=$('.footer');
+    $('.textField').on('focus',function(){
+        $wrapper.removeClass('wrapper-lt-iphone5');
+        $footer.removeClass('footer-lt-iphone5');
+        $footer.css('bottom','0');
+        $('.header,.back_button,.info-body').addClass('header-lt-iphone5');
 
+    })
+    $('#email').on('focus',function(){
+        $('.header,.back_button,.info-body').removeClass('header-lt-iphone5');
+        $footer.css('bottom','20px');
+    })
     if (version[0] < 7) {
         $wrapper.addClass('wrapper-lt-iphone5');
         $footer.addClass('footer-lt-iphone5');
-        $('.textField').on('focus',function(){
-            $wrapper.removeClass('wrapper-lt-iphone5');
-            $footer.removeClass('footer-lt-iphone5');
-            $('.header').add('.back_button').addClass('header-lt-iphone5');
-        })
     }
-
    
 </script>
 </body>

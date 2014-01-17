@@ -33,7 +33,7 @@ var CONFIG = (function() {
 var myScroll;
 FeedbackJSON = null;
 function loaded() {
-	myScroll = new iScroll('wrapper');
+    myScroll = new iScroll('wrapper');
 }
 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
@@ -94,25 +94,26 @@ function showAlert(title){
 function submitForm(language) {
 // result 会作为json 数据发给objC端
     var result = {};
-    // var content = document.getElementById("content").value;
-    // var email = document.getElementById("email").value;
-    // // var age_group = document.getElementById("age_group").value;
-    // // var gender = document.getElementById("gender").value;
-    // // var rate = document.getElementById("rate").value;
-    // if (!!email) {
-    //     result.email = email
-    // }
-    
+    var content = document.getElementById("content").value;
+    var age_group = document.getElementById("age_group").value;
+    var gender = document.getElementById("gender").value;
+    var rate = document.getElementById("rate").value;
+    if (!!age_group) {
+        result.age_group = age_group
+    }
+    if (!!gender) {
+        result.gender = gender
+    }
 
 
 //自定义字段，目前有提供了两个自定义Hash可用
 //contact 用于传递联系方式，比如email,qq,phone等
 //remark 用于传递备注信息，比如用户名,网址等等
 // 参见下面两个例子,这里我们添加了网页表单id为email和user_name
-   var email = document.getElementById("email").value;
-   if (!!email) {
-       result.contact.email = email;
-   }
+//    var email = document.getElementById("email").value;
+//    if (!!email) {
+//        result.contact.email = email;
+//    }
 //    var userName = document.getElementById("user_name").value;
 //    if (!!userName) {
 //        result.remark.userName = userName;
@@ -145,6 +146,7 @@ function initFormValues(values_json){
 //    $("#content").val(JSON.stringify(FeedbackJSON));
 }
 
+
 $(document).ready(function () {
     $('#cancelUserDashBoard').click(function () {
         $('#userDashBoard').modal('hide');
@@ -155,8 +157,9 @@ $(document).ready(function () {
     $('#wrapper').click(function () {
         $('input:focus').blur();
         return false;
-    })
+    });
 });
+
 
 
 function renderFeedbacks(feedbacks) {
@@ -178,7 +181,7 @@ function renderNewFeedback(feedback) {
     var html = template(feedback);
     setTimeout(function () {
             $("#topics").append(html);
-            if ($('#topics').height() > $('#wrapper').height()) {
+            if($('#topics').height() > $('#wrapper').height()){
                     myScroll.refresh();
                     myScroll.scrollToElement("#feedbacks_foot", 10);
                 }
