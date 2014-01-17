@@ -142,17 +142,11 @@
         $wrapper.removeClass('wrapper-lt-iphone5');
         $footer.removeClass('footer-lt-iphone5');
         $footer.css('bottom','0');
-        $('.header,.back_button,.info-body').addClass('header-lt-iphone5');
-
     })
     $('#email').on('focus',function(){
         $('.header,.back_button,.info-body').removeClass('header-lt-iphone5');
-        $footer.css('bottom','20px');
     })
-    if (version[0] < 7) {
-        $wrapper.addClass('wrapper-lt-iphone5');
-        $footer.addClass('footer-lt-iphone5');
-    }
+
 
 
    
