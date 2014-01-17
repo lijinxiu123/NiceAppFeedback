@@ -181,6 +181,11 @@ Changed the  MessageBody
 #feedbacks_body {
     overflow: hidden;
 }
+#scroller,
+#page,
+#feedbacks_body{
+    height: 100%;
+}
 /************
 
 Changed the  MessageBody
