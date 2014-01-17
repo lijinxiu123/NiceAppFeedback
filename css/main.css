@@ -1,0 +1,398 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow: hidden;
+}
+body, ul, li {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    font-size: 16px;
+    font-family:"helvetica";
+    -webkit-user-select: none;
+    -webkit-text-size-adjust: none;
+    font-family: helvetica;
+    width: 100%;
+    background-color: #F7F7F7;
+}
+input{
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+/************
+
+Changed the #header
+--Edited By Jinxiu Li
+
+*************/
+ #header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    /*background: url('../img/titleBar.png') no-repeat left top;*/
+    background-color: #f8f8f8;
+    background-size: 100% 45px;
+    /*background-image:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
+background-image:-moz-linear-gradient(top, #999, #666 2%, #222);
+background-image:-o-linear-gradient(top, #999, #666 2%, #222);*/
+    padding: 0;
+    color: #878a8f;
+    font-size: 17px;
+    text-align: center;
+    box-sizing: border-box;
+    z-index: 10;
+}
+#header a {
+    color: #f3f3f3;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+/************
+
+联系方式的样式
+
+*************/
+#email{
+    width: 180px;
+}
+
+/************
+
+Changed the #header
+--Edited By Jinxiu Li
+
+*************/
+ #footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    background-color: #323a45;
+    background-size: 100% 44px;
+    padding: 0px;
+    z-index: 100;
+}
+/************
+
+Changed the #header
+--Edited By Jinxiu Li
+
+*************/
+ #footer .textField {
+    width: 92%;
+    height: 30px;
+    font-size: 16px;
+    margin: 7px 0px 6px 10px;
+    box-sizing: border-box;
+    text-indent: 4px;
+    padding-left: 5px;
+    line-height: 30px;
+}
+#footer select {
+    /*background: rgba(255, 255, 255, 0.0) url('../img/star.png') no-repeat 0 0;*/
+    background-size: 30px 30px;
+    background-position: center center;
+    color: transparent;
+    padding: 4px;
+    line-height: 21px;
+    border: 1px solid transparent;
+    -webkit-appearance: none;
+    width: 34px;
+    height: 34px;
+    margin-left: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+#footer select:active, #footer select.active {
+    background: rgba(255, 255, 255, 0.0) url('../img/star_pressed.png') no-repeat 0 0;
+}
+#footer td {
+    padding: 0px;
+    height: 40px;
+}
+#footer tr {
+    padding: 0px;
+    height: 40px;
+}
+#footer table {
+    padding: 0px;
+    height: 40px;
+}
+/************
+
+Changed the  MessageBody
+--Edited By Jinxiu Li
+
+*************/
+ #wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 74px;
+    bottom: 44px;
+    left: 0;
+    width: 100%;
+    background: #F7F7F7;
+    overflow: auto;
+}
+/*#wrapper:focus {*/
+
+/*background: red;*/
+
+/*}*/
+
+/*#wrapper:hover {*/
+
+/*background: green;*/
+
+/*}*/
+
+/*#wrapper:active {*/
+
+/*background: blue;*/
+
+/*}*/
+ #scroller {
+    position: relative;
+    /*  -webkit-touch-callout:none;*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow:scroll;
+    float: left;
+    width: 100%;
+    padding: 0;
+}
+#page {
+    margin: 10px 0px;
+}
+/************
+
+Changed the  MessageBody
+--Edited By Jinxiu Li
+
+*************/
+ .messageBody {
+    -webkit-border-radius: 13px;
+    border-radius: 3px;
+    padding: 0px 0px 0px 0px;
+    max-width: 62%;
+    /*text-shadow: 0 1px 0 rgb(245, 245, 245);*/
+    position: relative;
+    margin: 15px 0;
+    word-wrap: break-word;
+}
+/*.messageSend {
+    float: right;
+    border-width: 17px 27px 18px 13px;
+    -webkit-border-image: url("../img/Balloon_1@2x.png") 32 41 24 26 stretch stretch;
+    border-image: url("../img/Balloon_1@2x.png") 31/2 70/2 46/2 33/2 stretch stretch;
+    background: #a3cde6;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-origin: padding-box, border-box, border-box;
+}*/
+
+/************
+
+Changed the  .messageSend
+--Edited By Jinxiu Li
+
+*************/
+ .messageSend {
+    position: relative;
+    float: right;
+    padding: 10px;
+    background: #EAEDF1;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-origin: padding-box, border-box, border-box;
+    margin-right: 20px;
+}
+.messageSend .arrow {
+    position: absolute;
+    float: right;
+    top: 10px;
+    right: -20px;
+    display: block;
+    height: 0;
+    width: 0;
+    border-left: 10px solid #EAEDF1;
+    border-right: 10px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
+    border-top: 10px solid rgba(0, 0, 0, 0);
+    border-style: solid;
+}
+.messageSend .messageContent {
+    line-height: 20px;
+}
+/*.messageReceive {
+    float: left;
+    border-width: 12px 14px 18px 27px;
+    -webkit-border-image: url("../img/Balloon_2@2x.png") 33 20 23 47 stretch stretch;
+    border-image: url("../img/Balloon_2@2x.png") 32 37 30 53 stretch stretch;
+    background: rgb(213, 213, 213);
+    /*background-clip: padding-box, border-box, border-box;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-origin: padding-box, border-box, border-box;
+}
+*/
+
+/************
+
+Changed the  .messageReceive
+--Edited By Jinxiu Li
+
+*************/
+ .messageReceive {
+    position: relative;
+    float: left;
+    padding: 10px;
+    margin-left:20px;
+    background: #79CEF3;
+    box-sizing:border-box;
+}
+.messageReceive .arrow {
+    position: absolute;
+    float: left;
+    top: 10px;
+    left: -20px;
+    display: block;
+    height: 0;
+    width: 0;
+    border-right: 10px solid #79cef3;
+    border-left: 10px solid rgba(0, 0, 0, 0);
+    border-bottom: 10px solid rgba(0, 0, 0, 0);
+    border-top: 10px solid rgba(0, 0, 0, 0);
+    border-style: solid;
+}
+.messageReceive .messageContent {
+    margin:0;
+    line-height: 20px;
+}
+/************
+
+Changed the  .createDate, .button
+--Edited By Jinxiu Li
+
+*************/
+ .createDate {
+    float: center;
+    display: block;
+    margin: 0px;
+    text-align: center;
+    font-size: 13px;
+    color: #c8c8c8;
+    line-height: 1;
+}
+.button {
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-image: url('../img/back_normal@2x.png');
+    background-size: 22px;
+    background-position: center center;
+    width: 22px;
+    height: 22px;
+    margin: 11px;
+}
+.button:active, .button.active {
+    background-image: url('../img/back_down.png');
+}
+input.sendButton {
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-position: center center;
+    background-color: #fe8f01;
+    width: 100px;
+    height: 30px;
+    color:white;
+    font-size: 14px;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+input.sendButton.active, input.sendButton:active {
+    background-color: #F08700;
+    ;
+}
+.clear {
+    clear: both;
+}
+/************
+
+Changed the #header
+--Edited By Jinxiu Li
+
+*************/
+ #backBtn {
+    position: absolute;
+    font-size: 12px;
+    float: left;
+    top: 0px;
+    left: 0px;
+    margin-left: 10px;
+    z-index: 100;
+}
+.select_group {
+    float: left;
+    margin-left: 10px;
+}
+/************
+
+Changed the #header
+--Edited By Jinxiu Li
+
+*************/
+ .info-body {
+    height: 30px;
+    top: 42px;
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    padding: 5px 0;
+    color: #CACACA;
+    border: 1px solid #EFEFEF;
+    border-width: 1px 0 1px 0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.05);
+            box-shadow: 0 1px 0 rgba(0,0,0,.05);
+}
+/************
+
+Changed the #header
+--Edited By Jinxiu Li
+
+*************/
+ @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    .button {
+        background-image: url('../img/back_normal@2x.png');
+    }
+    .button:active, .button.active {
+        background-image: url('../img/back_down@2x.png');
+    }
+}
+
+
+
+/************
+lt iphone5
+*************/
+ #container .wrapper-lt-iphone5 {
+    top: 44px;
+    bottom: 44px;
+    height:77%;
+}
+#container .footer-lt-iphone5 {
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    height: 44px;
+}
+#header-wrapper .header-lt-iphone5 {
+    top: 20px;
+}
