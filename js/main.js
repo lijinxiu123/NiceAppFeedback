@@ -110,10 +110,10 @@ function submitForm(language) {
 //contact 用于传递联系方式，比如email,qq,phone等
 //remark 用于传递备注信息，比如用户名,网址等等
 // 参见下面两个例子,这里我们添加了网页表单id为email和user_name
-//    var email = document.getElementById("email").value;
-//    if (!!email) {
-//        result.contact.email = email;
-//    }
+   var email = document.getElementById("email").value;
+   if (!!email) {
+       result.contact.email = email;
+   }
 //    var userName = document.getElementById("user_name").value;
 //    if (!!userName) {
 //        result.remark.userName = userName;
